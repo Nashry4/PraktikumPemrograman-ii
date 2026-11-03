@@ -2,17 +2,21 @@ package module04.problem03;
 
 public class Dog extends Pet{
     private String furColor;
-    private String ability;
+    private String[] abilities;
 
-    public Dog (String name, String breed, String furColor, String ability) {
+    public Dog (String name, String breed, String furColor, String[] abilities) {
         super(name, breed);
         this.furColor = furColor;
-        this.ability = ability;
+        this.abilities = abilities;
     }
 
     public void displayDetailDog() {
         super.display();
         System.out.println("Memiliki warna bulu: " + this.furColor);
-        System.out.println("Memiliki kemampuan: " + this.ability);
+        System.out.print("Memiliki kemampuan: ");
+        for (String ability : abilities ) {
+            System.out.print(ability);
+        }
+        System.out.println();
     }
 }

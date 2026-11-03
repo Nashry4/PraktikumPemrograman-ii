@@ -41,7 +41,7 @@ public class Main {
                     String furColorDog = input.nextLine();
 
                     System.out.print("Kemampuan: ");
-                    String ability = input.nextLine();
+                    String[] ability = input.nextLine().split(",");
 
                     Dog dog  = new Dog(nameDog, breedDog, furColorDog, ability);
 
